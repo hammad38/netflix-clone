@@ -16,7 +16,13 @@ function Banner() {
 
   console.log(movies);
 
-  return <header></header>;
+  return(
+      <header className="banner">
+        <div className="banner-contents">
+
+        </div>
+      </header>
+      )
 }
 
 export default Banner;
