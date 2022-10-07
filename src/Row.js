@@ -8,12 +8,12 @@ function Row({ title, fetchURL }) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
-      console.log(request);
-      return request
+      setMovies(request.data.results);
+      return request;
     }
     fetchData();
     //if [], run once when the row loads and don't run it again
-  }, []);
+  }, [fetchURL]);
   return (
     <div>
       <h2>{title}</h2>
