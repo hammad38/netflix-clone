@@ -9,6 +9,7 @@ function Row({ title, fetchURL }) {
 
   //every time the row loads this piece of code will runs
   //if [], run once when the row loads and don't run it again
+
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
@@ -29,6 +30,7 @@ function Row({ title, fetchURL }) {
 
         {movies.map((movie) => (
           <img
+            key={movie.id}
             className="row-poster"
             src={`${base_url}${movie.poster_path}`}
             alt={movie.name}
