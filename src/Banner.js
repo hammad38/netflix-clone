@@ -14,7 +14,7 @@ function Banner() {
     fetchData();
   }, []);
 
-  console.log(movies)
+  console.log(movies);
 
   return <header></header>;
 }
