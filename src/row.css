@@ -22,5 +22,9 @@
 }
 
 .row-posterLarge{
-    
+    max-height: 250px;
+}
+
+.row-posterLarge:hover{
+    transform: scale(1.09);
 }
