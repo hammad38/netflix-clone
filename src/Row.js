@@ -38,8 +38,7 @@ function Row({ title, fetchURL, isLargeRow }) {
             key={movie.id}
             className={`row-poster ${isLargeRow && "row-posterLarge"}`}
             src={imageUrl == "https://image.tmdb.org/t/p/original/null" ? "https://image.tmdb.org/t/p/original//kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg" : imageUrl}
-            // "https://image.tmdb.org/t/p/original/null"
-            // alt={movie.original_title}
+            alt={movie.original_title}
           />
           )
           
