@@ -28,25 +28,25 @@ function Row({ title, fetchURL, isLargeRow }) {
       <div className="row-posters">
         {/*  this is for posters   */}
 
-        {movies.map((movie) => (
-          <img
+        {movies.map((movie) => {
+
+          const imageUrl = `${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`
+          
+          return(
+
+            <img
             key={movie.id}
             className={`row-poster ${isLargeRow && "row-posterLarge"}`}
-            src=
-           {`${base_url}${
-               isLargeRow ? movie.poster_path :  movie.backdrop_path
-            }`} 
-            
+            src={imageUrl == "https://image.tmdb.org/t/p/original/null" ? "https://image.tmdb.org/t/p/original//kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg" : imageUrl}
             // "https://image.tmdb.org/t/p/original/null"
-            alt={movie.original_title}
-           
-
+            // alt={movie.original_title}
           />
-        ))}
+          )
+          
+        })}
       </div>
     </div>
   );
-
 }
 
 export default Row;
