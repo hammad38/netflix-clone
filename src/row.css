@@ -1,5 +1,6 @@
-.row{
-    margin-left: 20px;
+.row {
+  color: #fff;
+  margin-left: 20px;
 }
 
 .row-posters {
@@ -9,8 +10,8 @@
   padding: 20px;
 }
 
-.row-posters::-webkit-scrollbar{
-    display: none;
+.row-posters::-webkit-scrollbar {
+  display: none;
 }
 
 .row-poster {
@@ -25,10 +26,10 @@
   transform: scale(1.08);
 }
 
-.row-posterLarge{
-    max-height: 250px;
+.row-posterLarge {
+  max-height: 250px;
 }
 
-.row-posterLarge:hover{
-    transform: scale(1.09);
+.row-posterLarge:hover {
+  transform: scale(1.09);
 }
