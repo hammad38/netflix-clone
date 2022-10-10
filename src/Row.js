@@ -32,15 +32,21 @@ function Row({ title, fetchURL, isLargeRow }) {
           <img
             key={movie.id}
             className={`row-poster ${isLargeRow && "row-posterLarge"}`}
-            src={`${base_url}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path
-            }`}
-            alt={movie.name}
+            src=
+           {`${base_url}${
+               isLargeRow ? movie.poster_path :  movie.backdrop_path
+            }`} 
+            
+            // "https://image.tmdb.org/t/p/original/null"
+            alt={movie.original_title}
+           
+
           />
         ))}
       </div>
     </div>
   );
+
 }
 
 export default Row;
