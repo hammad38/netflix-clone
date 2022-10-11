@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import YouTube from "react-youtube";
 import axios from "./axios";
 import "./row.css";
 
@@ -19,6 +20,15 @@ function Row({ title, fetchURL, isLargeRow }) {
     fetchData();
   }, [fetchURL]);
 
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      //     // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+
   console.log(movies);
 
   return (
@@ -29,21 +39,25 @@ function Row({ title, fetchURL, isLargeRow }) {
         {/*  this is for posters   */}
 
         {movies.map((movie) => {
+          const imageUrl = `${base_url}${
+            isLargeRow ? movie.poster_path : movie.backdrop_path
+          }`;
 
-          const imageUrl = `${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`
-          
-          return(
-
+          return (
             <img
-            key={movie.id}
-            className={`row-poster ${isLargeRow && "row-posterLarge"}`}
-            src={imageUrl === "https://image.tmdb.org/t/p/original/null" ? "https://image.tmdb.org/t/p/original//kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg" : imageUrl}
-            alt={movie.original_title}
-          />
-          )
-          
+              key={movie.id}
+              className={`row-poster ${isLargeRow && "row-posterLarge"}`}
+              src={
+                imageUrl === "https://image.tmdb.org/t/p/original/null"
+                  ? "https://image.tmdb.org/t/p/original//kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg"
+                  : imageUrl
+              }
+              alt={movie.original_title}
+            />
+          );
         })}
       </div>
+      <YouTube videoId="XtMThy8QKqU" opts={opts} />
     </div>
   );
 }
