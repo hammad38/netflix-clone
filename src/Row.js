@@ -37,7 +37,7 @@ function Row({ title, fetchURL, isLargeRow }) {
             <img
             key={movie.id}
             className={`row-poster ${isLargeRow && "row-posterLarge"}`}
-            src={imageUrl == "https://image.tmdb.org/t/p/original/null" ? "https://image.tmdb.org/t/p/original//kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg" : imageUrl}
+            src={imageUrl === "https://image.tmdb.org/t/p/original/null" ? "https://image.tmdb.org/t/p/original//kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg" : imageUrl}
             alt={movie.original_title}
           />
           )
