@@ -10,6 +10,14 @@
   padding: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .row-posters {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .row-posters::-webkit-scrollbar {
   display: none;
 }
@@ -21,6 +29,15 @@
   margin-right: 10px;
   transition: transform 450ms;
 }
+
+@media screen and (max-width: 480px) {
+  .row-poster {
+    margin-bottom: 10px;    
+    display: flex;
+    flex-wrap: wrap;  
+  }
+}
+
 
 .row-poster:hover {
   transform: scale(1.08);
