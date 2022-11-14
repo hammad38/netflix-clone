@@ -7,14 +7,15 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
+/* padding-left: 0; */
   padding: 20px;
 }
 
 @media screen and (max-width: 480px) {
   .row-posters {
-    display: flex;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
     }
 }
 
@@ -32,9 +33,11 @@
 
 @media screen and (max-width: 480px) {
   .row-poster {
+     /* margin: 10px; */
     margin-bottom: 10px;    
-    display: flex;
-    flex-wrap: wrap;  
+    margin-right: 10px;
+    /* display: flex;
+    flex-wrap: wrap;   */
   }
 }
 
